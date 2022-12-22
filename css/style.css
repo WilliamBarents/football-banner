@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+.banner {
+  width: 80rem;
+  height: 50rem;
+  margin: 0 auto;
+  background-image: url(/media/imgs/goal-post.jpeg);
+  opacity: 1; }
+
+.score {
+  position: absolute;
+  padding: 1rem;
+  background-color: #fff;
+  border: 5px solid black;
+  border-radius: 1rem;
+  font-size: 3rem;
+  font-family: sans-serif; }
+
+.banner-football__container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%; }
+
+.ball {
+  width: 10rem;
+  height: 10rem; }
+
+.score-ball {
+  width: 6rem;
+  height: 6rem;
+  transform: translateX(-20rem) translateY(-19rem); }
+
+.miss-ball {
+  width: 6rem;
+  height: 6rem;
+  transform: translateX(20rem) translateY(-19rem); }
+
+.bounce {
+  animation: ballbounce 0.8s infinite; }
+
+@keyframes ballbounce {
+  0% {
+    top: 0;
+    -webkit-animation-timing-function: ease-in; }
+  40% { }
+  50% {
+    transform: translateY(-4rem);
+    -webkit-animation-timing-function: ease-out; }
+  55% {
+    transform: translateY(-6rem);
+    -webkit-animation-timing-function: ease-in; }
+  65% {
+    transform: translateY(-2rem);
+    -webkit-animation-timing-function: ease-out; }
+  95% {
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-in; }
+  100% {
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-in; } }
+
+.goal-keeper-container {
+  position: relative;
+  transition: all; }
+  .goal-keeper-container .goalkeeper {
+    position: absolute;
+    width: 13rem; }
+
+.standard-keeper-position {
+  top: 20rem;
+  transform: translateX(50%);
+  right: 50%; }
+
+.right-keeper-position {
+  top: 20rem;
+  transform: translateX(-28%) rotate(-45deg);
+  right: 50%; }
+
+.left-keeper-position {
+  top: 20rem;
+  transform: translateX(128%) rotate(45deg);
+  right: 50%; }
